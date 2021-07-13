@@ -1,0 +1,394 @@
+/*
+CSS color pallette
+
+#176E74 Peacock
+#FFDC32 Gold
+#E0701D Orange
+#504E4B Charcoal 
+#4ECDC4 Medium Turquoise
+#f7fff7 Mint Cream
+#FF6B6B Bittersweet
+#ffe66d Naples Yellow
+#fff0a3 Lighter Naples Yellow
+--------------------------*/
+
+/*Global Styles
+--------------------------*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 1%;
+    padding: 0;
+    font-family:'Biryani', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #504E4B;
+}
+
+a {
+    color: #FF6B6B;
+}
+
+a:hover {
+    color: #FFDC32;
+    text-decoration: none;
+}
+
+#navbar {
+    width: 100%;
+    background-color: #f7fff7;
+    font-size: 0.9rem;
+}
+
+#nav, #nav ul /*all lists*/ {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 1.25;
+}
+
+#nav li {
+    padding-top: 1.5%;
+}
+
+#nav a {
+   display:block;
+   width: 130px; 
+   text-decoration:none;
+   color: #FF6B6B;
+}
+
+#nav li {
+    float:left;
+    text-align: center;
+    width: 130px; /*width needed or else opra goes nuts*/
+}
+
+#nav li ul { /*second level lists*/
+    position:absolute;
+    /*background:#f7fff7;*/background-color: #FFDC32;
+    width:130px;
+    left: -999em; /*using left to hide display menus because display:none is not read by screen readers*/
+    font-size: 0.67rem;
+}
+
+#nav li:hover ul { /*lists nested under hovered list items*/
+    left:auto;
+}
+
+#nav li ul li:hover {
+    /*background-color: #ffe66d;*/
+    background-color:#f7fff7;
+    border-radius: 25px;
+}
+
+/*img {
+    width: 300px;
+}*/
+
+.main-item img {
+    width: 90%;
+    display:block;
+    margin-bottom: auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    margin: 0;
+    color: #176E74;
+}
+
+h2 {
+    font-size: 35px;
+    font-style: normal; 
+    font-weight: normal;
+    margin-bottom: auto; 
+}
+
+h3 {
+    font-size: 26px;
+    margin-bottom: 0;
+    font-style: italic; 
+    font-weight: lighter;
+}
+
+p {
+    /*color: #176E74;*/
+    font-family:'Biryani', sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.content-wrap h1 {
+    margin-top: 5%;
+    margin-bottom: 3.5%;
+    color: #4ECDC4;
+    font-size: 74px;
+    font-weight: normal;
+}
+
+.content-wrap h2 {
+    font-family:'Biryani', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+}
+
+.content-wrap h3 {
+    font-size: 30px;
+    font-weight: lighter;
+    font-style: italic;
+    margin-bottom: 4%;
+}
+
+.item-details h3+p {
+    font-style: italic;
+}
+
+.item-details h3~p {
+    margin: 0;
+}
+
+.divider > section {
+    border-bottom: 1px dashed #4ecdc4;
+    padding: 25px 0;
+}
+
+.divider > section:last-of-type {
+    border-bottom: none;
+}
+
+/*Profile
+--------------------------*/
+header {
+    background-color: #FFDC32;
+}
+
+header p {
+   color: #f7fff7;
+}
+
+/*Main
+--------------------------*/
+main {
+    background-color: #f7fff7;
+    margin-top: 4%;
+}
+
+.intro h3 p {
+    margin-top: 4%;
+    font-style: normal;
+
+}
+
+/*main a {
+    color: #176E74;
+}*/
+
+main .btn {
+    color: #f7fff7;
+    background: #176E74;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;  
+}
+
+main .btn:hover {
+    background: rgba(26, 83, 92, 80%);
+}
+
+.main-item {
+    overflow: hidden;
+    margin:15% 10% 10%;
+}
+
+.main-item h3 {
+    margin-top: 0;
+}
+
+
+/*Work Experience
+.work-experience {
+    background-color: #4ECDC4;
+}
+
+.work-experience p {
+    color: #f7fff7;
+}
+
+.work-experience a {
+    color:#FFDC32;
+    text-decoration: none;
+}
+
+.work-experience ul {
+    text-decoration: none;
+    color: #f7fff7;
+}
+/*Education change to service work
+--------------------------
+.education {
+    background-image: url(../images/other/multi.jpg);
+    background-size: cover;
+    background-position: top right;
+    padding-bottom: 100px;
+}
+
+.education p {
+    width: 60%;
+}
+
+Service Work
+--------------------------
+.service-work {
+    background-color: #FFDC32;
+}
+
+.service-work a {
+    color:#176E74;
+}
+
+.service-work .btn {
+    color: #f7fff7;
+    background: #176E74;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;  
+}
+
+.service-work .btn:hover {
+    background: rgba(26, 83, 92, 80%);
+}
+
+.organization {
+    overflow: hidden;
+    border-bottom: 1px dashed #4ecdc4;
+    padding: 25px 0;
+}
+
+.organization h3 {
+    margin-top: 0;
+}
+
+/*.organization img {
+    float: left;
+    margin-right: 20px;
+}
+No image, presently*/
+
+/*Contact Info
+--------------------------*/
+footer {
+    margin-top: 8%;
+    background-color: #4ECDC4;
+
+}
+
+footer a {
+    color: #f7fff7;
+}
+
+footer a:hover {
+    color: #FFDC32;
+} 
+
+.contact-list {
+    list-style-type: none;
+    font-weight: 300;
+    font-size: small;
+    padding: 0;
+}
+
+.contact-list a {
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/*.contact-list a:hover {
+    color: #ffe66d;
+}*/
+
+/*Responsive
+--------------------------*/
+
+@media screen and (min-width:750px) {
+   
+    header, footer {
+    text-align: center;
+   }
+   
+    .main-item img {
+        float: left;
+        margin-right: 10%;
+    }
+
+    /*.job-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 20px;
+    }*/
+
+    .contact-list {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:749px) {
+    h1 {
+        font-size: 65px;
+        margin-bottom: 20px;
+    }
+    h1, h2 {
+        line-height:1;
+    }
+    .contact-list a {
+        padding: 8px;
+    }
+}
+
+@media screen and (min-width:500px) {
+    main {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-gap: 10px;
+    }
+    main .intro {
+        text-align: left;
+        grid-column: 1 / span 2;
+        grid-template-rows: auto;
+    }
+}
+
+@media screen and (min-width:750px) {
+    main {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        grid-gap: 10px;
+        
+    }
+    main .intro {
+        grid-column: 1 / span 3;
+    }
+}
